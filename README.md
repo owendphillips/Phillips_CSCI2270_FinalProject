@@ -1,1 +1,2 @@
 # Phillips_CSCI2270_FinalProject
+My final project will be a simulation of an online shopping service, like Amazon. It will read in a file containing product names, prices, descriptions and categories, and put them into a graph. Products in similar categories will be adjacent to each other, all linked to a starting vertex. Everything that is read into the graph will also be passed into a hash table which will hold pointers to everything in the graph. This hash table will be used to search for specific items. There will also be a "shopping cart" implemented as a vector. 
