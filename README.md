@@ -40,6 +40,10 @@ SYSTEM REQUIREMENTS
 
 	Operating System: Mac OS or Linux.
 	
+MY NAME
+
+	Owen Phillips
+	
 OPEN ISSUES/BUGS
 
 	One issue is that if the text file is sufficiently large, there will be hash collisions when reading the
