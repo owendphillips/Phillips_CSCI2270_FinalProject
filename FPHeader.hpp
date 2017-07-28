@@ -134,13 +134,16 @@ void estore::addToCart(vertex* v)	//ADDS A VERTEX TO CART VECTOR, ALONG WITH THE
 }
 void estore::viewCart()	//PRINTS EVERYTHING IN CART VECTOR
 {
+	int total = 0;
 	if (!cart.empty())
 	{
 		for (int i = 0; i < cart.size(); i++)
 		{
 			cout << "Item: " << cart[i]->item->product << endl;
 			cout << "Cost: $" << cart[i]->item->cost << " x " << cart[i]->num << " = $" << cart[i]->item->cost * cart[i]->num << endl;
+			total = total + (cart[i]->item->cost * cart[i]->num);
 		}
+		cout << "Total: $" << total << endl;
 	}
 	else
 	{
@@ -152,8 +155,8 @@ void estore::checkout()	//TOTALS EVERYTHING IN THE CART AND EMPTIES IT
 	int total = 0;
 	for (int i = 0; i < cart.size(); i++)
 	{
-		cout << "Item: " << cart[i]->item->product << " , Cost: $" << cart[i]->item->cost << endl;
-		total = total + cart[i]->item->cost;
+		cout << "Item: " << cart[i]->item->product << " , Cost: $" << cart[i]->item->cost * cart[i]->num << endl;
+		total = total + (cart[i]->item->cost * cart[i]->num);
 	}
 	cout << "Total: $" << total << endl;
 	cart.clear();
